@@ -65,7 +65,7 @@ export default class App extends Component {
     }
 
     componentDidMount() {
-       this._animate();
+    //    this._animate();
     }
 
     _onTimeChange(evt) {
@@ -79,7 +79,7 @@ export default class App extends Component {
         let currentTime = ((timestamp % loopTime) / loopTime) * parseInt(evt.target.value);
         // console.log(currentTime);
         this.setState({
-            time: currentTime
+            time: parseInt(evt.target.value)
         });
         // this._animationFrame = window.requestAnimationFrame(this._onTimeChange.bind(this));
     }
@@ -174,7 +174,7 @@ export default class App extends Component {
                         mapboxApiAccessToken={MAPBOX_TOKEN}
                     />
                 </DeckGL>
-            <input type="range" onChange={this._onTimeChange.bind(this)} min="0" max="1800"></input>
+                <input type="range" step="0.1" onChange={this._onTimeChange.bind(this)} min="6" max="1800"></input>
             </div>
         );
     }
