@@ -9,7 +9,7 @@ import {scaleLinear, scaleThreshold} from 'd3-scale';
 const DATA_URL = {
   ACCIDENTS:
     'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/highway/accidents.csv',
-  ROADS: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/examples/highway/roads.json'
+  ROADS: '/data/roads.json'
 };
 
 function getKey({state, type, id}) {
